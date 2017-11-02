@@ -13,6 +13,20 @@ import webpackStream from 'webpack-stream';
 import webpack2      from 'webpack';
 import named         from 'vinyl-named';
 
+
+// deploy to github pages
+import deploy        from 'gulp-gh-pages';
+import htmlmin       from 'gulp-htmlmin';
+import connect       from 'gulp-connect';
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});
+
 // Load all Gulp plugins into one variable
 const $ = plugins();
 
