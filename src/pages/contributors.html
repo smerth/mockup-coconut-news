@@ -1,0 +1,57 @@
+---
+container: default
+has-background: false
+dark: false
+background-url: url('')
+bkg-color: rgba(220, 245, 242, 1.00)
+---
+
+<!-- fluid or full -->
+
+ {{> off-canvas}}
+
+<!-- the dark class can be used to set text color and link color on dark backgrounds -->
+{{#ifequal dark true }}
+<div class="off-canvas-content containers dark" data-off-canvas-content>
+{{else}}
+<div class="off-canvas-content containers" data-off-canvas-content>
+{{/ifequal}} 
+
+    <!-- change the page container from sized to fluid to full -->
+    {{#ifequal container 'fluid' }}
+    <div class="grid-container fluid">
+    {{/ifequal}} 
+    {{#ifequal container 'full' }}
+    <div class="grid-container full">
+    {{/ifequal}} 
+    {{#ifequal container 'default' }}
+    <div class="grid-container">
+     {{/ifequal}} 
+
+      <!-- Your page content lives here -->
+
+        <!-- add a background color to the page-wrapper -->
+        {{#ifequal has-background true }}
+        <div class="page-wrapper" style="background-color: {{ bkg-color }};">
+        {{else}}
+        <div class="page-wrapper">
+        {{/ifequal}}
+
+            {{> header}}
+
+            <div class="main-wrapper">
+
+                    {{> menu-onscreen}}
+
+                    {{> breadcrumbs}}
+
+                    <!-- main  content -->
+                    {{> user-page-layout}}
+
+
+                     {{> footer}}
+
+             </div> <!-- end of main wrapper -->
+            </div> <!-- end of page-wrapper --> 
+        </div> <!-- end grid-container -->
+    </div><!-- end off-canvas-content -->

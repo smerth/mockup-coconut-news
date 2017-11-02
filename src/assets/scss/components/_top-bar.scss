@@ -1,0 +1,27 @@
+.top-bar {
+    color: $white;
+    height: 225px;
+    background-image: url("/assets/img/coconut-tree.jpg");
+    background-size: cover;
+    background-position-y: 50%;
+    #site-logo {
+        width: 100px;
+        // height: 100px;
+        float: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    #site-logo-path {
+        fill: $white;
+    }
+    .site-name,
+    .site-slogan {
+        line-height: 1;
+    }
+    ul {
+        background-color: transparent;
+        a {
+            color: $white;
+        }
+    }
+}

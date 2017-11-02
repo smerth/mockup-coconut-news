@@ -1,0 +1,100 @@
+<!-- footer like the header gets grid-padding regardless of the page background --> 
+
+
+
+
+ <footer class="grid-x grid-padding-x">
+
+
+{{#ifequal has-background true }}
+ <div class="small-12 cell footer-top" style="...">
+    {{else}}
+ <div class="small-12 cell footer-top">
+{{/ifequal}}
+
+    <div class="grid-x grid-margin-x">
+        <div class="small-6 medium-3 cell footer-top-1">
+            <nav>
+                <h5>Topics</h5>
+                <ul class="menu vertical">
+                    <li><a href="#">Topic 1</a></li>
+                    <li><a href="#">Topic 2</a></li>
+                    <li><a href="#">Topic 3</a></li>
+                    <li><a href="#">Topic 4</a></li>
+                    <li><a href="#">Topic 5</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="small-6 medium-3 cell footer-top-2">
+            <nav>
+                <h5>Tags</h5>
+                <ul class="menu vertical">
+                    <li><a href="#">Tag 1</a></li>
+                    <li><a href="#">Tag 2</a></li>
+                    <li><a href="#">Tag 3</a></li>
+                    <li><a href="#">Tag 4</a></li>
+                    <li><a href="#">Tag 5</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="small-6 medium-3 cell footer-top-3">
+            <nav>
+                <h5>Help</h5>
+                <ul class="menu vertical">
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Shipping &amp; Delivery</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="small-6 medium-3 cell footer-top-4">
+            <nav>
+                <h5>My Account</h5>
+                <ul class="menu vertical">
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">My Wishlist</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+{{#ifequal has-background true }}
+ <div class="small-12 cell footer-bottom" style="...">
+    {{else}}
+ <div class="small-12 cell footer-bottom">
+{{/ifequal}}
+
+
+    <div class="grid-x grid-margin-x align-middle">
+        <div class="small-12 medium-4 cell footer-bottom-1">
+            <nav>
+                <ul class="menu expanded horizontal">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="small-12 medium-4 cell footer-bottom-2">
+
+        <div class="grid-x grid-padding-x align-middle">
+            <div class="auto shrink cell footer-bottom-1">
+                {{> logo}}
+            </div>
+            <div class="auto cell footer-bottom-1">
+                     <h1 class="site-name">Tech Brew</h1>
+                    <p class="site-slogan subheader">Blogging and blogging and blogging</p>
+            </div>
+        </div>
+
+        </div>
+        <div class="small-12 medium-4 cell footer-bottom-3">
+            <div class="text-right bottom-copyright">
+                <span>©2017 Company Name. All rights reserved.</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+   </footer>

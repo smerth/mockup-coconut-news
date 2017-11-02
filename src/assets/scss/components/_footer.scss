@@ -1,0 +1,45 @@
+
+
+footer {
+h1.site-name,
+    .site-slogan {
+        line-height: 1;
+        font-size: 16px;
+    }
+}
+
+/* Small only */
+
+@media screen and (max-width: 39.9375em) {
+    .footer-bottom-1,
+    .footer-bottom-2,
+    .bottom-copyright {
+        text-align: center;
+    }
+}
+
+.footer-top {
+    background-color: $light-gray; 
+    padding-top: 1rem;
+    padding-bottom: 1rem; // margin-top: 1rem;
+}
+
+.footer-bottom {
+    font-family: sans-serif;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: white;
+    background-color: $dark-gray;
+    a {
+        color: white;
+    }
+}
+
+footer #site-logo {
+    width: 30px;
+    height: 30px;
+}
+
+footer #site-logo-path {
+    fill: $green-light;
+}
